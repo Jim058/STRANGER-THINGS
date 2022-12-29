@@ -1,0 +1,370 @@
+/*預設值設定*/
+
+html,body,ul,li,h2 {
+    padding: 0;
+    margin: 0;
+}
+
+ul,li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #ddd;
+}
+/*版面大小與置中*/
+html {
+    max-width: 1600px;
+    background-color: #000;
+    margin: 0 auto;
+    font-family:  'Barlow Semi Condensed', sans-serif;
+    font-weight: 700;
+}
+
+
+
+body {
+    max-width: 100%;
+    color: #ddd;
+}
+
+
+@media screen and (min-width:1601px){
+    html,body {
+        max-width: 2000px;
+    }
+}
+
+/*導覽列*/
+.menu {
+    width: 40%;
+    height: 100px;
+    margin: 0 auto;
+    
+    
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-between;
+    line-height: 100px;
+    font-size: 1vw;
+    cursor: pointer;
+    
+    
+}
+.menu li {
+    transition: 0.2s ease-in-out ;
+}
+.menu li:hover:not(.active) {
+    color:#f9ce5c;
+    scale: 1.3;
+}
+
+.menu a {
+    height: 100%;
+    width: 15px;
+}
+.active{
+    color:#f9ce5c;
+}
+
+/*--------------------------首頁-------------------------------*/
+/*Banner*/
+
+.banner {
+    max-width: 100%;
+    height: 35vw;
+    overflow: hidden;
+    
+    
+}
+
+.banner img {
+    object-fit: cover;
+    object-position: center;
+    background-size: 100%;
+    opacity: .5;
+    width: 100%;
+    float: left;
+    position: relative;
+    top: -8vw;
+}
+
+/*主要內容*/
+
+.container {
+    max-width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+/*大標題*/
+
+.home-title {
+    width: 100%;
+    height: 10vw;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.home-title h2 {
+    width: 100%;
+    line-height: 10vw;
+    font-size: 3vw;
+    text-align: center;
+}
+
+.home-title h2::after,.home-title h2::before {
+    content: '';
+    width: 40%;
+    height: 0.2vw;
+    background-color: #ddd;
+    display:inline-block;
+    position: relative;
+    top: -0.8vw;
+}
+
+/*圖片和說明*/
+
+.images {
+    max-width: 90%;
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 150px;
+}
+
+.images a {
+    width: 100%;
+    height: 100%;
+}
+
+.images div {
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.images .image {
+    width: 85%;
+    height: 95%;
+    /*border: 2px solid #fff ;*/
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    position: relative;
+    object-fit: 100%;
+    object-position: center;
+    background-size: 100%;
+    float: left;
+    cursor: pointer;
+    
+}
+
+
+.EP .detail {
+    width: 35%;
+    height: 2.5vw;
+    position: relative;
+    margin: 0 auto;
+    font-size: 1.5vw;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+}
+
+.EP .detail:hover {
+    color: #f9ce5c;
+}
+
+
+/*頁腳 footer*/
+
+.footer {
+    max-width: 100%;
+    height: 300px;
+    background-color: #111;
+}
+
+/*文字及選單寬高*/
+.footer div {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .About,.footer .footerLink {
+    margin-top: 40px;
+    
+}
+
+/*左側文字*/
+.footer .About {
+    width: 90%;
+    /*禁止文字複製*/
+    user-select:none; /* standard syntax */
+    -webkit-user-select:none; /* for Chrome、Safari */
+    -moz-user-select:none;  /* for Mozilla、Firefox */
+}
+
+.About li {
+    padding-top: 2vw;
+    font-weight: 300;
+}
+
+
+
+/*右側鏈結*/
+.footer .footerLink {
+    width: 7%;
+    cursor: pointer;
+}
+
+
+.footerLink  li{
+    padding: 2px 0;
+    transition: 0.3s ease-in;
+    font-weight: 300;
+}
+
+.footerLink li:hover {
+    color: #fff;
+    text-shadow: 2px 3px 10px #000;
+}
+
+
+/*--------------------------Season-----------------------*/
+
+.season-title {
+    margin: 0 auto;
+    width: 66%;
+    padding: 30px 0;
+}
+
+.season-title h2 {
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 18px;
+}
+
+.season-title h3 {
+    font-size: 30px;
+    line-height: 0;
+    font-weight: 900;
+    color: red;
+}
+
+
+.All-EP {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.All-EP ul {
+    max-width: 70%;
+    margin:  0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/*.All-EP li {
+    border: 2px solid #ddd;
+}*/
+
+.seasonImg {
+    width: 100%;
+    height: 13vw;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.seasonImg img {
+    max-width: 25vw;
+    position: relative;
+    left: 2vw;
+    margin: 0 auto;
+    object-fit: cover;
+    object-position: center center;
+    background-size: 100%;
+}
+
+.season-detail {
+    max-width: 100%;
+    padding: 25px 1.8vw;
+}
+
+.season-detail h2 {
+    font-size: 0.8vw;
+    letter-spacing: 5px;
+}
+
+.season-detail h1 {
+    font-size: 2.3vw;
+    font-weight: 700;
+
+}
+
+.season-detail p {
+    font-size: 1.2vw;
+    font-weight: 300;
+}
+
+.only-one {
+    max-width: 50%;
+}
+
+@media(max-width:1200px){
+    .All-EP ul {
+        display: block;
+    }
+    .season-detail h2 {
+        font-size: 2vw;
+    }
+    
+    .season-detail h1 {
+        font-size: 3vw;
+        font-weight: 700;
+    
+    }
+    
+    .season-detail p {
+        font-size: 2vw;
+        font-weight: 300;
+    }
+}
+
+/*------------回到首頁-----------*/
+
+.btn-home{
+    position: relative;
+    margin: 35px auto;
+    margin-bottom: 105px;
+    width: 230px;
+    height: 75px;
+    background-color: #bbb;
+
+}
+
+.btn-home p {
+    margin: 0 auto;
+    font-size: 22px;
+    font-weight: 500;
+    color: #000;
+    text-align: center;
+    line-height: 75px;
+}
+
+.btn-home:hover {
+    background-color: #fff;
+    box-shadow: 3px 5px 25px #ccc;
+}
