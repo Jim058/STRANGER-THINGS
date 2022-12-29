@@ -32,7 +32,7 @@ body {
 
 @media screen and (min-width:1601px){
     html,body {
-        max-width: 2000px;
+        max-width: 100vw;
     }
 }
 
@@ -239,7 +239,7 @@ body {
 }
 
 
-/*--------------------------Season-----------------------*/
+/*--------------------------SYNOPSIS Page-----------------------*/
 
 .season-title {
     margin: 0 auto;
@@ -257,7 +257,7 @@ body {
     font-size: 30px;
     line-height: 0;
     font-weight: 900;
-    color: red;
+    color: #b92d32;
 }
 
 
@@ -274,10 +274,6 @@ body {
 }
 
 
-
-/*.All-EP li {
-    border: 2px solid #ddd;
-}*/
 
 .seasonImg {
     width: 100%;
@@ -342,7 +338,169 @@ body {
         font-weight: 300;
     }
 }
+/*--------------------------videos Page-----------------------*/
 
+/*整個影片區*/
+.video-box  {
+    max-width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+/*-----------------影片區每一列---------------*/
+.video-box .row {
+    margin: 0 auto;
+    display: flex;
+    max-width: 100%;
+    height: 26vw;
+    
+}
+
+
+/*--------------每一列裡的縮圖------------------*/
+
+.video-box .thumbnail {
+    /*border: 2px solid rgb(145, 22, 22);*/
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-box img , .video-box a img{
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    object-fit: cover;
+    object-position: center center;
+    background-size: 100%;
+    transition: 0.28s ease-out;
+}
+
+.video-box a img {
+    opacity: .7;
+    
+}
+
+.video-box a {
+    width: 5%;
+    position: absolute;
+    z-index: 2;
+    padding-top: 18.5%;
+    
+}
+
+.video-box a img:hover {
+    scale: 1.3;
+    opacity: .9;
+    margin-top: -15%;
+}
+
+.video-box .play-right {
+    left: 93%;
+}
+
+.video-box .play-left {
+    left: 43%;
+}
+
+.video-box h4 {
+    position: absolute;
+    margin-top: -3%;
+    
+}
+
+.thumbnail h4 {
+    cursor: pointer;
+    transition: 0.45s ease-in;
+}
+.thumbnail h4:hover {
+    color: #f9ce5c;
+}
+
+/*--------------影片介紹和說明---------------*/
+.video-detail {
+    width: 100%;
+    height: 100%;
+    margin: auto 0;
+    background-color: #ddd;
+}
+
+/*----------------------------------------
+1. 先給區域的大小
+2. H1>H4>H2>p 依序先調整好相對距離和字體大小等
+3. 整體垂直置中的位置
+-----------------------------------------------------*/
+
+.video-box .video-detail {
+    width: 100%;
+    color: #000;
+}
+
+.video-detail span {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.video-detail h1 {
+    font-style: italic;
+}
+
+.video-detail h4 {
+    position: relative;
+    margin-top: -1.5vw;
+    color: #b92d32;
+}
+
+.video-detail .detail-bottom {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    margin-top: 1vw ;
+}
+
+.video-detail p {
+    font-weight: 300;
+}
+
+
+.video-detail .detail-pos {
+    width: 100%;
+    position: relative;
+    vertical-align: middle;
+    margin: 13% 0;
+}
+
+
+/*-------SEASON左右線條--------------------------------------------------*/
+.video-detail h1::before,.video-detail h1::after {
+    content: '';
+    position: relative;
+    top: -10px;
+    margin: 0 10px;
+    width: 15vw;
+    height: 0.2vw;
+    background-color: #111;
+    display: inline-block;
+}
+
+
+
+@media(min-width:1601){
+    .video-box  {
+        max-width: 100%;
+        position: relative;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width:960px){
+    .video-detail h1::before,.video-detail h1::after {
+        width: 9vw;
+    }
+}
 /*------------回到首頁-----------*/
 
 .btn-home{
